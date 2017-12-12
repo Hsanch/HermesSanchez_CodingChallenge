@@ -12,7 +12,7 @@ The size of a word's social network is equal to 1 (for the word itself), plus th
 are friends with it, plus the number of friends each of its friends has, and so on. A word is in its own
 social network, so if our dictionary is simply `[HI]` then the size of the social network for HI is 1.
 
-## Main Functions
+## Main Functions: (found in`main.rb`)
 There are two main functions: `levenshtein_distance_calculator(first, second)` and `getNetwork(word, dictionary)`. 
 #### 1. `levenshtein_distance_calculator(first, second)`
  Used to build two dimensional hash were the Levenshtein Distance of two words with x and y lengths respectively can be found by looking in `hash[[y,x]]`. This hash map is built using the mathematical definiton of Lenshtein Distance (http://en.wikipedia.org/wiki/Levenshtein_distance). 
