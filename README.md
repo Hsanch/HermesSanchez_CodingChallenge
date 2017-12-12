@@ -21,4 +21,4 @@ This function initially finds the social network for the search word, in this ca
 
 ##### This program will take approximately 30 seconds to search through the entire `\dictionary.txt\`in search for `"LISTY"'s` social network. The end result will be a social network of size 90. 
 
-##### Also, there are plenty of comments throughout the code which should explain anything other important point
+##### Also, there are plenty of comments throughout the code which should explain any other important point
