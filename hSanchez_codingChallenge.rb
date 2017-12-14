@@ -1,4 +1,6 @@
 #find size of social network for testWord
+
+#You can change words HERE: 
 testWord = "LISTY"
 socialNetwork = [testWord]
 
@@ -94,7 +96,6 @@ def getNetwork(word, dictionary)
 	end
 	return network
 end
-
 #Printing out the final solution
 socialNetwork = getNetwork(testWord, dictionary) 
 socialNetwork << testWord #Adds the initial word to the network
