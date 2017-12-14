@@ -1,11 +1,12 @@
 class TestWord
 	
 	def initialize(word)
+		#initialize class variables
 		@word = word
 		@network = []
 		@dictionary = []
 		@dictionary = TestWord.dictionaryData
-		@size = 0
+		@size = []
 	
 	end
 
@@ -22,11 +23,10 @@ class TestWord
 		return dict
 	end 
 
+	#user can call set_network to create the social network for his TestWord Object
 	def set_network
 		@network = calculate_network(@word)
-	end
-
-	def set_network_size
+		#updates the size class variable for the TestWord Object
 		@size = @network.size
 	end
 
@@ -68,7 +68,7 @@ class TestWord
 			#Ignores the words that are more than 1 character shorter or longer than the search word
 			#These words will always have a distance greater than 1
 			if !((@dictionary[i].length - @word.length).abs >= 2)				
-			#else #Finds all words with distance of 1 that are also within 1 character of the search word
+			#Finds all words with distance of 1 that are also within 1 character of the search word
 				if (self.calculate_lecenshtein_distance(word, @dictionary[i]) == 1)
 					network << @dictionary[i]
 					@dictionary.delete(@dictionary[i])
@@ -76,7 +76,7 @@ class TestWord
 					#puts "network: #{network}"
 					size +=-1
 					i+=-1
-					#Previous two steps are accounting for the elimination
+					#Previous two steps are accounting for the change in size of @dictionary
 				end
 			end
 			i+=1
@@ -84,11 +84,12 @@ class TestWord
 
 		j = 0
 		while j <= network.size
+			#when the search word returns with an empty network it goes back up a level
 			if network.empty? 
 				return network
 			else
 				#Goes down every 'branch' of the social network
-				#Once it reaches the bottom, it adds up all the members amd returns it
+				#Once it reaches the bottom, it adds up all the members and returns it
 				self.calculate_network(network[j]).each do |element|
 					network << element
 				end
