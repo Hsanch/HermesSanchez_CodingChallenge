@@ -100,9 +100,3 @@ class TestWord
 	end
 end
 
-wordOne = TestWord.new("LISTY")
-#puts wordOne.dictionary
-wordOne.set_network
-wordOne.set_network_size
-puts wordOne.network.inspect
-puts "network size: #{wordOne.size}"
