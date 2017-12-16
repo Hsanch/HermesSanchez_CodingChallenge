@@ -13,8 +13,6 @@ are friends with it, plus the number of friends each of its friends has, and so 
 social network, so if our dictionary is simply `[HI]` then the size of the social network for HI is 1.
 
 ## Main Functions: (found in`TestWord.rb`)
-There are four main functions: `levenshtein_distance_calculator(first, second)`,`getNetwork(word, dictionary)`, and `set_network`
-=======
 
 There are two main functions: `levenshtein_distance_calculator(first, second)` and `getNetwork(word, dictionary)`. 
 #### 1. `levenshtein_distance_calculator(first, second)`
