@@ -25,5 +25,5 @@ This function calls `getNetwork(word, dictionary)` and updates the class variabl
 Creates an array with each word from the `dictionary.txt` file as an element, this array will then be set to `@dictionary`. 
 
 ##### This program will take approximately 90 seconds to search through the entire `\dictionary.txt\`in search for `"LISTY"'s` social network. The end result will be a social network of size 150.
-##### This program will take approximately 30 seconds to search through the entire `\dictionary.txt\`in search for `"LISTY"'s` social network. The end result will be a social network of size 150. 
+
 ##### Also, there are plenty of comments throughout the code which should explain any other important point
